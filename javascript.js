@@ -1,9 +1,20 @@
 let computerChoice
 let humanChoice
 function getComputerChoice(){
-  computerChoice = math.Random();
+  num = Math.random();
+
+  if (num <= .3334){
+ computerChoice = "rock"
+  }else if (num <= .6667){
+ computerChoice = "scissors"
+  }else {
+ computerChoice = "paper"
+  }
+
 return computerChoice;
 }
+
+
 
 function getHumanChoice(){
   humanChoice = prompt("Type 'rock', 'paper', or 'scissors'")
@@ -11,8 +22,9 @@ return humanChoice
 }
 
 
-getHumanChoice()
-getComputerChoice()
+console.log(getHumanChoice())
+
+console.log(getComputerChoice())
 
 if (computerChoice == humanChoice) {
   console.log("DRAW!")
