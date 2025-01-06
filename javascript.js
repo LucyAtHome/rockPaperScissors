@@ -4,27 +4,35 @@ function getComputerChoice(){
   num = Math.random();
 
   if (num <= .3334){
- computerChoice = "rock"
-  }else if (num <= .6667){
- computerChoice = "scissors"
-  }else {
- computerChoice = "paper"
+    computerChoice = "rock"
+  } else if (num <= .6667){
+    computerChoice = "scissors"
+  } else {
+    computerChoice = "paper"
   }
 
-return computerChoice;
+  return computerChoice;
 }
 
 
 
 function getHumanChoice(){
   humanChoice = prompt("Type 'rock', 'paper', or 'scissors'")
-return humanChoice
+	if (humanChoice === "rock" || humanChoice === "paper" || humanChoice == "scissors"){
+	  return;
+	}else{ 
+	  alert("Thats not valid input!");
+	  getHumanChoice();
+	}
+	return humanChoice;
 }
 
 
-console.log(getHumanChoice())
+getHumanChoice()
 
-console.log(getComputerChoice())
+console.log("You chose " + humanChoice)
+
+console.log("The computer chose " + getComputerChoice())
 
 if (computerChoice == humanChoice) {
   console.log("DRAW!")
