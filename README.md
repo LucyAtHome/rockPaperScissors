@@ -23,3 +23,11 @@ If human is paper and computer is scissors "lose!"
 If human is scissors and computer is rock "lose!"
 Else, "win!"
 
+
+----
+
+Now, on rps-ui branch, I am going to turn this into a UI.
+
+I need to create 3 buttons, one to select rock, paper, and scisssors.
+
+Then, I need to make a div to show the current tally of score. When a winner is determined after 5 rounds, I then need to display who the winner is, and give options to play again.
